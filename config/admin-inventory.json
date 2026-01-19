@@ -1,0 +1,330 @@
+{
+  "version": "1.0.0",
+  "last_updated": "2024-01-19",
+  "modules": [
+    {
+      "id": "dashboard",
+      "name": "Dashboard & Overview",
+      "navigation_group": "Dashboard",
+      "resources": [],
+      "pages": [],
+      "widgets": [
+        {
+          "name": "DashboardStats",
+          "class": "App\\Filament\\Widgets\\DashboardStats",
+          "required": true
+        },
+        {
+          "name": "SalesTrendChart",
+          "class": "App\\Filament\\Widgets\\SalesTrendChart",
+          "required": true
+        },
+        {
+          "name": "TopProductsChart",
+          "class": "App\\Filament\\Widgets\\TopProductsChart",
+          "required": true
+        },
+        {
+          "name": "SystemHealthWidget",
+          "class": "App\\Filament\\Widgets\\SystemHealthWidget",
+          "required": true
+        }
+      ]
+    },
+    {
+      "id": "users",
+      "name": "Users & Customers",
+      "navigation_group": "Users",
+      "resources": [
+        {
+          "name": "UserResource",
+          "class": "App\\Filament\\Resources\\UserResource",
+          "required": true
+        }
+      ],
+      "pages": [
+        {
+          "name": "CustomerSegments",
+          "class": "App\\Filament\\Pages\\CustomerSegments",
+          "route": "/admin/users/segments",
+          "required": true
+        }
+      ],
+      "widgets": []
+    },
+    {
+      "id": "roles",
+      "name": "Roles & Permissions",
+      "navigation_group": "Security",
+      "resources": [
+        {
+          "name": "RoleResource",
+          "class": "App\\Filament\\Resources\\RoleResource",
+          "required": true
+        },
+        {
+          "name": "PermissionResource",
+          "class": "App\\Filament\\Resources\\PermissionResource",
+          "required": true
+        }
+      ],
+      "pages": [
+        {
+          "name": "UserRoleAssignment",
+          "class": "App\\Filament\\Pages\\UserRoleAssignment",
+          "route": "/admin/roles/assign",
+          "required": true
+        }
+      ],
+      "widgets": []
+    },
+    {
+      "id": "settings",
+      "name": "System Settings",
+      "navigation_group": "Settings",
+      "resources": [
+        {
+          "name": "SettingResource",
+          "class": "App\\Filament\\Resources\\SettingResource",
+          "required": true
+        }
+      ],
+      "pages": [
+        {
+          "name": "FeatureFlagsPage",
+          "class": "App\\Filament\\Pages\\FeatureFlagsPage",
+          "route": "/admin/settings/feature-flags",
+          "required": true
+        }
+      ],
+      "widgets": []
+    },
+    {
+      "id": "secrets",
+      "name": "Secrets Vault",
+      "navigation_group": "Integrations",
+      "resources": [
+        {
+          "name": "ProviderResource",
+          "class": "App\\Filament\\Resources\\ProviderResource",
+          "required": true
+        }
+      ],
+      "pages": [
+        {
+          "name": "ProviderCredentialsPage",
+          "class": "App\\Filament\\Pages\\ProviderCredentialsPage",
+          "route": "/admin/providers/{id}/credentials",
+          "required": true
+        }
+      ],
+      "widgets": []
+    },
+    {
+      "id": "branding",
+      "name": "Branding & App Management",
+      "navigation_group": "Branding",
+      "resources": [],
+      "pages": [
+        {
+          "name": "BrandingSettings",
+          "class": "App\\Filament\\Pages\\BrandingSettings",
+          "route": "/admin/branding",
+          "required": true
+        },
+        {
+          "name": "ThemeTokens",
+          "class": "App\\Filament\\Pages\\ThemeTokens",
+          "route": "/admin/branding/theme",
+          "required": true
+        },
+        {
+          "name": "AppVersionControl",
+          "class": "App\\Filament\\Pages\\AppVersionControl",
+          "route": "/admin/branding/app-versions",
+          "required": true
+        },
+        {
+          "name": "MaintenanceMode",
+          "class": "App\\Filament\\Pages\\MaintenanceMode",
+          "route": "/admin/branding/maintenance",
+          "required": true
+        }
+      ],
+      "widgets": []
+    },
+    {
+      "id": "cms",
+      "name": "Content & CMS",
+      "navigation_group": "Content",
+      "resources": [
+        {
+          "name": "CmsPageResource",
+          "class": "App\\Filament\\Resources\\CmsPageResource",
+          "required": true
+        },
+        {
+          "name": "ContentStringResource",
+          "class": "App\\Filament\\Resources\\ContentStringResource",
+          "required": true
+        }
+      ],
+      "pages": [
+        {
+          "name": "LocalizationManager",
+          "class": "App\\Filament\\Pages\\LocalizationManager",
+          "route": "/admin/cms/localization",
+          "required": true
+        }
+      ],
+      "widgets": []
+    },
+    {
+      "id": "home_builder",
+      "name": "Home Layout Builder",
+      "navigation_group": "Home Builder",
+      "resources": [
+        {
+          "name": "HomeSectionResource",
+          "class": "App\\Filament\\Resources\\HomeSectionResource",
+          "required": true
+        }
+      ],
+      "pages": [
+        {
+          "name": "PlacementManager",
+          "class": "App\\Filament\\Pages\\PlacementManager",
+          "route": "/admin/home-sections/placement",
+          "required": true
+        }
+      ],
+      "widgets": []
+    },
+    {
+      "id": "catalog",
+      "name": "Catalog",
+      "navigation_group": "Catalog",
+      "resources": [
+        {
+          "name": "ProductResource",
+          "class": "App\\Filament\\Resources\\ProductResource",
+          "required": true,
+          "status": "done"
+        },
+        {
+          "name": "CategoryResource",
+          "class": "App\\Filament\\Resources\\CategoryResource",
+          "required": true
+        },
+        {
+          "name": "BrandResource",
+          "class": "App\\Filament\\Resources\\BrandResource",
+          "required": true
+        },
+        {
+          "name": "AttributeResource",
+          "class": "App\\Filament\\Resources\\AttributeResource",
+          "required": true
+        }
+      ],
+      "pages": [],
+      "widgets": []
+    },
+    {
+      "id": "inventory",
+      "name": "Inventory & Warehousing",
+      "navigation_group": "Inventory",
+      "resources": [
+        {
+          "name": "WarehouseResource",
+          "class": "App\\Filament\\Resources\\WarehouseResource",
+          "required": false
+        },
+        {
+          "name": "StockLedgerResource",
+          "class": "App\\Filament\\Resources\\StockLedgerResource",
+          "required": true
+        }
+      ],
+      "pages": [
+        {
+          "name": "StockAdjustments",
+          "class": "App\\Filament\\Pages\\StockAdjustments",
+          "route": "/admin/inventory/adjustments",
+          "required": true
+        }
+      ],
+      "widgets": []
+    },
+    {
+      "id": "orders",
+      "name": "Orders & Fulfillment",
+      "navigation_group": "Orders",
+      "resources": [
+        {
+          "name": "OrderResource",
+          "class": "App\\Filament\\Resources\\OrderResource",
+          "required": true,
+          "status": "done"
+        }
+      ],
+      "pages": [
+        {
+          "name": "OrderWorkflowBuilder",
+          "class": "App\\Filament\\Pages\\OrderWorkflowBuilder",
+          "route": "/admin/orders/workflow",
+          "required": true
+        }
+      ],
+      "widgets": []
+    },
+    {
+      "id": "modules",
+      "name": "Modules Management",
+      "navigation_group": "Settings",
+      "resources": [
+        {
+          "name": "ModuleResource",
+          "class": "App\\Filament\\Resources\\ModuleResource",
+          "required": true,
+          "status": "done"
+        }
+      ],
+      "pages": [],
+      "widgets": []
+    }
+  ],
+  "permissions": [
+    {
+      "name": "dashboard.view",
+      "module": "dashboard",
+      "required": true
+    },
+    {
+      "name": "users.view",
+      "module": "users",
+      "required": true
+    },
+    {
+      "name": "roles.view",
+      "module": "roles",
+      "required": true
+    },
+    {
+      "name": "settings.view",
+      "module": "settings",
+      "required": true
+    },
+    {
+      "name": "providers.view",
+      "module": "secrets",
+      "required": true
+    },
+    {
+      "name": "branding.edit",
+      "module": "branding",
+      "required": true
+    }
+  ]
+}
+
