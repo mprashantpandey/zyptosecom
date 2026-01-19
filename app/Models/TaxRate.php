@@ -18,6 +18,8 @@ class TaxRate extends Model
         'category',
         'is_active',
         'description',
+        'created_by',
+        'updated_by',
     ];
 
     protected function casts(): array
